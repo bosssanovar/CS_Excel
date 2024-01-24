@@ -24,15 +24,17 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //ExcelBook book = new();
+            ExcelBook book = new();
 
-            //book.SetAAAEntity("AAA Entity");
-            //book.SetBBBEntity("BBB Entity");
+            book.SetAAAEntity("AAA Entity");
+            book.SetBBBEntity("BBB Entity");
 
-            //var saveDir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //var fileName = "ExcelTest.xlsx";
-            //var savePath = System.IO.Path.Combine(saveDir, fileName);
-            //book.Save(savePath);
+            var saveDir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            var fileName = "ExcelTest.xlsx";
+            var savePath = System.IO.Path.Combine(saveDir, fileName);
+            book.Save(savePath);
+
+            MessageBox.Show($"{savePath}　を保存完了", "情報");
         }
     }
 }
